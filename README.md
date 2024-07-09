@@ -35,10 +35,10 @@ To tackle this challenge I...
 
 ## Table of Contents
 <ol>
- <li>PyBank Folder<li>                      
- <li>main.py <li>
+ <li>PyBank Folder                      
+ <li>main.py 
  <li>Analysis Folder
- <li>pybank_analysis.txt <li>
+ <li>pybank_analysis.txt
  <li>Resources Folder <li>
  <li>budget_data.csv <li>
  <li>PyPoll Folder <li>
