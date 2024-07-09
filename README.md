@@ -37,7 +37,7 @@ To tackle this challenge I...
 <ol>
  <li>PyBank Folder                      
  <ol><li>main.py 
- <li>Analysis Folder
+ <ol><li>Analysis Folder
  <ol><ol><li>pybank_analysis.txt
  <li>Resources Folder 
  <ol><ol><li>budget_data.csv
