@@ -35,18 +35,18 @@ To tackle this challenge I...
 
 ## Table of Contents
 <ol>
- <li>1. PyBank Folder
+ <li>PyBank Folder
    <ol>                       
- <li>a. main.py <li>
- <li>b. Analysis Folder
+ <li>main.py <li>
+ <li>Analysis Folder
     <ol>
- <li>i. pybank_analysis.txt <li>
- <li>c. Resources Folder <li>
- <li>i. budget_data.csv <li>
- <li>2. PyPoll Folder <li>
- <li>a. main.py <li>
- <li>b. Analysis Folder <li>
- <li>i. pypoll_analysis.txt <li>
- <li>c. Resources Folder <li>
- <li>i. election_data.csv <li>
- <li>3. ReadMe <li>
+ <li>pybank_analysis.txt <li>
+ <li>Resources Folder <li>
+ <li>budget_data.csv <li>
+ <li>PyPoll Folder <li>
+ <li>main.py <li>
+ <li>Analysis Folder <li>
+ <li>pypoll_analysis.txt <li>
+ <li>Resources Folder <li>
+ <li>election_data.csv <li>
+ <li>ReadMe <li>
