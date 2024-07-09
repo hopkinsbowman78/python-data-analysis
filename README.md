@@ -18,7 +18,7 @@ To tackle this challenge I...
 ## Resources
 
 
-+ (https://docs.python.org/3/library/stdtypes.html#dict) 
++ https://docs.python.org/3/library/index.html
 
 + ChatGPT
    
