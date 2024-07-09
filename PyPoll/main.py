@@ -12,7 +12,7 @@ csvpath = os.path.join(os.path.dirname(__file__),"Resources", "election_data.csv
 with open(csvpath, encoding="UTF-8") as csvfile:
    csv_reader = csv.reader(csvfile, delimiter = ',')
    csv_header = next(csv_reader)
-   print(f"CSV Header: {csv_header}")
+   print(f"CSV Header: {csv_header}") #Store the csv file header
 
 
    for row in csv_reader:
@@ -56,7 +56,7 @@ print(f"Winner:  {winner}")
 print("--------------------------------")
 
 
-#Print Election Results to csv file
+#Print Election Results to txt file
 f = open("/Users/heather/Documents/CodeRepos/python_challenge/PyPoll/Analysis/pypoll_analysis.txt", "w")
 print("Election Results", file=f)
 print("--------------------------------", file=f)
@@ -67,3 +67,4 @@ for count in range(len(candidates)):
 print("--------------------------------", file=f)
 print(f"Winner:  {winner}", file=f)
 print("--------------------------------", file=f)
+
