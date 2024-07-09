@@ -34,17 +34,19 @@ To tackle this challenge I...
 
 
 ## Table of Contents
-
-1. PyBank Folder
->a. main.py 
->b. Analysis Folder
->>i. pybank_analysis.txt
->c. Resources Folder
->>i. budget_data.csv
-2. PyPoll Folder
->a. main.py
->b. Analysis Folder
->>i. pypoll_analysis.txt
->c. Resources Folder
->>i. election_data.csv
-3. ReadMe
+<ol>
+ <li>1. PyBank Folder
+   <ol>                       
+ <li>a. main.py <li>
+ <li>b. Analysis Folder
+    <ol>
+ <li>i. pybank_analysis.txt <li>
+ <li>c. Resources Folder <li>
+ <li>i. budget_data.csv <li>
+ <li>2. PyPoll Folder <li>
+ <li>a. main.py <li>
+ <li>b. Analysis Folder <li>
+ <li>i. pypoll_analysis.txt <li>
+ <li>c. Resources Folder <li>
+ <li>i. election_data.csv <li>
+ <li>3. ReadMe <li>
