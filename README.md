@@ -36,7 +36,7 @@ To tackle this challenge I...
 ## Table of Contents
 <ol>
  <li>PyBank Folder                      
- <li>main.py 
+ <ol><li>main.py 
  <li>Analysis Folder
  <li>pybank_analysis.txt
  <li>Resources Folder 
