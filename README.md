@@ -39,12 +39,12 @@ To tackle this challenge I...
  <li>main.py 
  <li>Analysis Folder
  <li>pybank_analysis.txt
- <li>Resources Folder <li>
- <li>budget_data.csv <li>
- <li>PyPoll Folder <li>
- <li>main.py <li>
- <li>Analysis Folder <li>
- <li>pypoll_analysis.txt <li>
- <li>Resources Folder <li>
- <li>election_data.csv <li>
- <li>ReadMe <li>
+ <li>Resources Folder 
+ <li>budget_data.csv
+ <li>PyPoll Folder
+ <li>main.py
+ <li>Analysis Folder
+ <li>pypoll_analysis.txt
+ <li>Resources Folder
+ <li>election_data.csv
+ <li>ReadMe
