@@ -37,15 +37,15 @@ To tackle this challenge I...
 1. PyBank Folder                      
 + main.py 
 + Analysis Folder
-pybank_analysis.txt
+++ pybank_analysis.txt
 + Resources Folder 
-budget_data.csv
+++ budget_data.csv
 
 2. PyPoll Folder
 + main.py
 + Analysis Folder
-pypoll_analysis.txt
+++ pypoll_analysis.txt
 + Resources Folder
-election_data.csv
+++ election_data.csv
 
 3. ReadMe
