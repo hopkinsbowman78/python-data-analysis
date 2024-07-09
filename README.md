@@ -35,14 +35,14 @@ To tackle this challenge I...
 
 ## Table of Contents
 
-### PyBank Folder                      
+#### PyBank Folder                      
 + main.py 
 + Analysis Folder (pybank_analysis.txt)
 + Resources Folder (budget_data.csv)
 
-### PyPoll Folder
+#### PyPoll Folder
 + main.py
 + Analysis Folder (pypoll_analysis.txt)
 + Resources Folder (election_data.csv)
 
-### ReadMe
+#### ReadMe
