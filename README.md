@@ -20,6 +20,8 @@ To tackle this challenge I...
 
 + https://docs.python.org/3/library/index.html
 
++ https://peps.python.org/pep-0008/
+
 + ChatGPT
    
 + AskBCS Learning Assistant
