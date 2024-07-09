@@ -18,7 +18,7 @@ To tackle this challenge I...
 ## Resources
 
 
-+ https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/visual-basic-conceptual-topics   
++ (https://docs.python.org/3/library/stdtypes.html#dict) 
 
 + ChatGPT
    
