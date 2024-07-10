@@ -1,4 +1,4 @@
-
+"""Module providing a function printing python version."""
 import os
 import csv
 
@@ -16,7 +16,7 @@ with open(csvpath, encoding="UTF-8") as csvfile:
     csv_header = next(csv_reader)
     print(f"CSV Header: {csv_header}")
 
-#Find the total months, net total and create lists of months and profits & losses
+#Find the total months, net total and lists of months and profits & losses
     for row in csv_reader:
         TOTAL_MONTHS += 1
         NET_TOTAL += int(row[1])
@@ -29,6 +29,7 @@ firstPL = profitsLosses[0]
 for i in range(1, len(profitsLosses)):
     monthlyChanges.append(profitsLosses[i] - firstPL)
     firstPL = profitsLosses[i]
+
 #Find average of monthly changes
 avgChange = sum(monthlyChanges) / len(monthlyChanges)
 
@@ -61,12 +62,12 @@ print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})")
 print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})")
 
 # print results to txt file
-output_path = "/Users/heather/Documents/CodeRepos/python_challenge/PyBank/Analysis/pybank_analysis.txt"
-with open(output_path, "w") as f:
-    print("Financial Analysis", file=f)
-    print("--------------------------------", file=f)
-    print(f"Total Months: {TOTAL_MONTHS}", file=f)
-    print(f"Total: ${NET_TOTAL}", file=f)
-    print(f"Average Change: ${round(avgChange, 2)}", file=f)
-    print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})", file=f)
-    print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})", file=f)
+f = open("PyBank/Analysis/pybank_analysis.txt", "w")
+print("Financial Analysis", file=f)
+print("--------------------------------", file=f)
+print(f"Total Months: {TOTAL_MONTHS}", file=f)
+print(f"Total: ${NET_TOTAL}", file=f)
+print(f"Average Change: ${round(avgChange, 2)}", file=f)
+print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})", file=f)
+print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})", file=f)
+print()
