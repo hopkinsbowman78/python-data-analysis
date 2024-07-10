@@ -10,7 +10,8 @@ To tackle this challenge I...
 1. Read and decoded the requirements of the challenge.
 2. Wrote (commented) the steps and processes needed to accomplish the goals of the challenge.
 3. Looked back at Bootcamp class activites to find code to accomplish processes.
-4. Researched the resources listed below to find addtional, or more elegant, code.
+4. Researched the resources listed below to find additional, or more elegant, code.
+5. Cleaned, commented and tested scripts.
    
 
 
