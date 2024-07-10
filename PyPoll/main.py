@@ -66,8 +66,8 @@ print("Election Results", file=f)
 print("--------------------------------", file=f)
 print(f"Total Votes: {VOTES}", file=f)
 print("--------------------------------", file=f)
-for count in range(len(candidates)):
-    print(f"{candidates[count]}: {percentages[count]}% ({vote_count[count]})", file=f)
+for count, candidate in enumerate(candidates):
+    print(f"{candidate}: {percentages[count]}% ({vote_count[count]})", file=f)
 print("--------------------------------", file=f)
 print(f"Winner:  {winner}", file=f)
 print("--------------------------------", file=f)
