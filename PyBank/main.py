@@ -23,7 +23,6 @@ with open(csvpath, encoding="UTF-8") as csvfile:
         profitsLosses.append(int(row[1]))
         monthList.append(row[0])
 
-
 # Create a list of monthly changes
 firstPL = profitsLosses[0]
 for i in range(1, len(profitsLosses)):
@@ -51,6 +50,7 @@ for i, change in enumerate(monthlyChanges):
 maxMonth = monthList[MAX_INDEX]
 minMonth = monthList[MIN_INDEX]
 
+
 # Print results to terminal
 print()
 print("Financial Analysis")
@@ -60,6 +60,7 @@ print(f"Total: ${NET_TOTAL}")
 print(f"Average Change: ${round(avgChange, 2)}")
 print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})")
 print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})")
+
 
 # print results to txt file
 f = open("PyBank/Analysis/pybank_analysis.txt", "w")

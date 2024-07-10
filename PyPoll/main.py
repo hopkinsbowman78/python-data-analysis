@@ -27,7 +27,7 @@ with open(csvpath, encoding="UTF-8") as csvfile:
             vote_count[candidate_index] = vote_count[candidate_index] + 1
         else:
             candidates.append(candidate)
-            vote_count.append(1)        
+            vote_count.append(1)       
 
 
 #Find percentage of votes per candidate
@@ -40,7 +40,7 @@ for count in range(len(candidates)):
     percentages.append(vote_percentage)
     if vote_count[count] > most_votes:
         MOST_VOTES_INDEX = count
-percentages = [round (i,2) for i in percentages]
+percentages = [round (i,3) for i in percentages]
 
 
 #Find the winner
@@ -61,7 +61,7 @@ print("--------------------------------")
 
 
  #open and print results to txt file
-f = open("/Users/heather/Documents/CodeRepos/python_challenge/PyPoll/Analysis/pypoll_analysis.txt","w")
+f = open("PyPoll/Analysis/pypoll_analysis.txt", "w")
 print("Election Results", file=f)
 print("--------------------------------", file=f)
 print(f"Total Votes: {VOTES}", file=f)
