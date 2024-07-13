@@ -55,7 +55,7 @@ print(f"Winner:  {winner}")
 print("--------------------------------")
  
 
-#Print Election Results to csv file
+#Print Election Results to txt file
 f = open("pypoll_analysis.txt", "w")
 print("Election Results", file=f)
 print("--------------------------------", file=f)
