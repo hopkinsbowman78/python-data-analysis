@@ -1,55 +1,68 @@
 """Module providing a function printing python version."""
 import os
 import csv
-import collections
-from collections import defaultdict
-os.system('clear') #clear the terminal prior to running the program
 
-#Open & read csv file, print the header
+#Define variables & set intial values
+votes = 0
+vote_count = []
+candidates = []
 
-#Create a dictionary for candidate_info={name: candidate_votes}
-candidate_info=defaultdict(int)
-VOTES=0
-
+# Open & read csv file
 csvpath = os.path.join(os.path.dirname(__file__),"Resources", "election_data.csv")
 with open(csvpath, encoding="UTF-8") as csvfile:
-    csv_reader = csv.DictReader(csvfile, delimiter = ',')
+    csv_reader = csv.reader(csvfile, delimiter = ',')
     csv_header = next(csv_reader)
-    print(f"CSV Header: {csv_reader.fieldnames}")
-    
-#Create a dictionary to hold data
+    print(f"CSV Header: {csv_header}")
+
     for row in csv_reader:
-        #Find candidate names
-        candidate_info[row["Candidate"]]+=1
-        #Find total number of votes
-        VOTES+=1
+        #Tally total votes
+        votes = votes + 1
+        #Find Candidate Names
+        candidate = row[2]
+        #Tally votes per candidate
+        if candidate in candidates:
+           candidate_index = candidates.index(candidate)
+           vote_count[candidate_index] = vote_count[candidate_index] + 1
+        else:
+           candidates.append(candidate)
+           vote_count.append(1)
 
-#Save results in "output" for printing
-output=''
-output += '\n'
-output += 'Election Results\n'
-output += '----------------------------\n'
-output += f'Total Votes: {VOTES}\n'
-output += '----------------------------\n'
 
-for name in candidate_info:
-    #Find number of votes for each candidate
-    candidate_votes=candidate_info[name]
-    #Find percent of votes for each candidate
-    percent_vote=((candidate_info[name]/VOTES)*100)
-    output += f'{name}:, {percent_vote:.3f}%, ({candidate_votes})\n'
+#Find percentages of votes & find the winner
+percentages = []
+most_votes = vote_count[0]
+most_votes_index = 0
+for count in range(len(candidates)):
+    vote_percentage = vote_count[count]/votes*100
+    percentages.append(vote_percentage)
+    if vote_count[count] > most_votes:
+        # print(most_votes)
+        most_votes_index = count
+winner = candidates[most_votes_index]
+percentages = [round (i,2) for i in percentages]
 
-#Find the winner
-winner=max(candidate_info, key=candidate_info.get)
 
-output += '----------------------------\n'
-output += f'Winner:{winner}\n'
-output += '----------------------------\n'
-output += '\n'
+#Print Election Results to terminal        
+print()
+print("Election Results")
+print("--------------------------------")
+print(f"Total Votes: {votes}")
+print("--------------------------------")
+for count in range(len(candidates)):
+    print(f"{candidates[count]}: {percentages[count]}% ({vote_count[count]})")
+print("--------------------------------")
+print(f"Winner:  {winner}")
+print("--------------------------------")
+ 
 
-#print results to terminal
-print(output)
-
-#Print results to txt file
-f = open("PyPoll/Analysis/pypoll_analysis.txt", "w")
-print(output, file=f)
+#Print Election Results to csv file
+f = open("pypoll_analysis.txt", "w")
+print("Election Results", file=f)
+print("--------------------------------", file=f)
+print(f"Total Votes: {votes}", file=f)
+print("--------------------------------", file=f)
+for count in range(len(candidates)):
+    print(f"{candidates[count]}: {percentages[count]}% ({vote_count[count]})", file=f)
+print("--------------------------------", file=f)
+print(f"Winner:  {winner}", file=f)
+print("--------------------------------", file=f)
