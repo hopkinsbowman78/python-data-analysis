@@ -56,7 +56,7 @@ print("--------------------------------")
  
 
 #Print Election Results to txt file
-f = open("pypoll_analysis.txt", "w")
+f = open("PyPoll/Analysis/pypoll_analysis.txt", "w")
 print("Election Results", file=f)
 print("--------------------------------", file=f)
 print(f"Total Votes: {votes}", file=f)
