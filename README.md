@@ -12,6 +12,7 @@ To tackle this challenge I...
 3. Looked back at Bootcamp class activites to find code to accomplish processes.
 4. Researched the resources listed below to find additional, or more elegant, code.
 5. Cleaned, commented and tested scripts.
+6. Updated (fixed/debugged) and tested scripts based on feedback.
    
 
 
