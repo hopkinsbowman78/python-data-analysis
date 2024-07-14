@@ -11,12 +11,12 @@ with open(csvpath, encoding="UTF-8") as csvfile:
     print(f"CSV Header: {csv_reader.fieldnames}")
 
 
-  #Create a dictionary for candidate_info={name: candidate_votes}
+  #Create a dictionary for candidate_info, initialize vote count
     candidate_info={}
     VOTES=0
 
 
-#Create a dictionary to hold data
+#Loop rows to find data
     for row in csv_reader:
         if row['Candidate'] in candidate_info.keys(): 
             #Find candidate names
@@ -26,7 +26,7 @@ with open(csvpath, encoding="UTF-8") as csvfile:
         #Find total number of votes
         VOTES+=1
 
-#Save results in "output" for printing
+# Initialize & store results in "output" for printing
 output=''
 output += '\n'
 output += 'Election Results\n'
@@ -34,6 +34,7 @@ output += '----------------------------\n'
 output += f'Total Votes: {VOTES}\n'
 output += '----------------------------\n'
 
+#Calculate and store number & percent of votes per candidate
 for name in candidate_info:
     #Find number of votes for each candidate
     candidate_votes=candidate_info[name]
@@ -41,7 +42,7 @@ for name in candidate_info:
     percent_vote=((candidate_info[name]/VOTES)*100)
     output += f'{name}:, {percent_vote:.3f}%, ({candidate_votes})\n'
 
-#Find the winner
+#Find and store the winner
 winner=max(candidate_info, key=candidate_info.get)
 
 output += '----------------------------\n'
@@ -49,7 +50,7 @@ output += f'Winner:{winner}\n'
 output += '----------------------------\n'
 output += '\n'
 
-#print results to terminal
+#Print results to terminal
 print(output)
 
 #Print results to txt file

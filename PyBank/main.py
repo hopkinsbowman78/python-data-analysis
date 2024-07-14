@@ -1,15 +1,17 @@
 """Module providing a function printing python version."""
 import os
 import csv
+os.system('clear') #clear the terminal prior to running the program
 
-# Define variables & set initial values
+
+#Initialize variables and lists to store data
 TOTAL_MONTHS = 0
 NET_TOTAL = 0
-profitsLosses = [] #profits/losses
+profitsLosses = []
 monthList = []
 monthlyChanges = []
 
-# Open & read csv file, store header
+# Open & read csv file, print header
 csvpath = os.path.join(os.path.dirname(__file__), "Resources", "budget_data.csv")
 with open(csvpath, encoding="UTF-8") as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=',')
@@ -23,14 +25,25 @@ with open(csvpath, encoding="UTF-8") as csvfile:
         profitsLosses.append(int(row[1]))
         monthList.append(row[0])
 
-# Create a list of monthly changes
+#Store data for printing later
+output=''
+output += '\n'
+output += 'Financial Analysis\n'
+output += '----------------------------\n'
+output += f'Total Months: {TOTAL_MONTHS}\n'
+output += f'Total: ${NET_TOTAL}\n'
+
+
+# Create and store list of monthly changes
 firstPL = profitsLosses[0]
 for i in range(1, len(profitsLosses)):
     monthlyChanges.append(profitsLosses[i] - firstPL)
     firstPL = profitsLosses[i]
 
-#Find average of monthly changes
+#Find and store average of monthly changes
 avgChange = sum(monthlyChanges) / len(monthlyChanges)
+#Print average change
+output += f'Average Change: ${round(avgChange, 2)}\n'
 
 # Find max increase and min increase
 maxIncrease = max(monthlyChanges)
@@ -50,25 +63,38 @@ for i, change in enumerate(monthlyChanges):
 maxMonth = monthList[MAX_INDEX]
 minMonth = monthList[MIN_INDEX]
 
+#Store Greatest Increase in Profits
+output += f'Greatest Increase in Profits: {maxMonth} (${maxIncrease})\n'
+#Store Greatest Decrease in Profits
+output += f'Greatest Decrease in Profits: {minMonth} (${maxDecrease})\n'
 
-# Print results to terminal
-print()
-print("Financial Analysis")
-print("--------------------------------")
-print(f"Total Months: {TOTAL_MONTHS}")
-print(f"Total: ${NET_TOTAL}")
-print(f"Average Change: ${round(avgChange, 2)}")
-print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})")
-print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})")
+#print results to terminal
+print(output)
 
-
-# print results to txt file
+#Print results to txt file
 f = open("PyBank/Analysis/pybank_analysis.txt", "w")
-print("Financial Analysis", file=f)
-print("--------------------------------", file=f)
-print(f"Total Months: {TOTAL_MONTHS}", file=f)
-print(f"Total: ${NET_TOTAL}", file=f)
-print(f"Average Change: ${round(avgChange, 2)}", file=f)
-print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})", file=f)
-print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})", file=f)
-print()
+print(output, file=f)
+
+
+
+# # Print results to terminal
+# print()
+# print("Financial Analysis")
+# print("--------------------------------")
+# print(f"Total Months: {TOTAL_MONTHS}")
+# print(f"Total: ${NET_TOTAL}")
+# print(f"Average Change: ${round(avgChange, 2)}")
+# print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})")
+# print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})")
+
+
+# # print results to txt file
+# with open("PyBank/Analysis/pybank_analysis.txt", "w") as f:
+#     print("Financial Analysis", file=f)
+#     print("--------------------------------", file=f)
+#     print(f"Total Months: {TOTAL_MONTHS}", file=f)
+#     print(f"Total: ${NET_TOTAL}", file=f)
+#     print(f"Average Change: ${round(avgChange, 2)}", file=f)
+#     print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})", file=f)
+#     print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})", file=f)
+#     print()
