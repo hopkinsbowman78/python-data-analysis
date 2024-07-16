@@ -72,6 +72,6 @@ output += f'Greatest Decrease in Profits: {minMonth} (${maxDecrease})\n'
 print(output)
 
 #Print results to txt file
-f = open("PyBank/Analysis/pybank_analysis.txt", "w")
+f = open("Analysis/pybank_analysis.txt", "w")
 print(output, file=f)
 
