@@ -54,5 +54,5 @@ output += '\n'
 print(output)
 
 #Print results to txt file
-f = open("PyPoll/Analysis/pypoll_analysis.txt", "w")
+f = open("Analysis/pypoll_analysis.txt", "w")
 print(output, file=f)
