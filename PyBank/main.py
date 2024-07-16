@@ -75,26 +75,3 @@ print(output)
 f = open("PyBank/Analysis/pybank_analysis.txt", "w")
 print(output, file=f)
 
-
-
-# # Print results to terminal
-# print()
-# print("Financial Analysis")
-# print("--------------------------------")
-# print(f"Total Months: {TOTAL_MONTHS}")
-# print(f"Total: ${NET_TOTAL}")
-# print(f"Average Change: ${round(avgChange, 2)}")
-# print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})")
-# print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})")
-
-
-# # print results to txt file
-# with open("PyBank/Analysis/pybank_analysis.txt", "w") as f:
-#     print("Financial Analysis", file=f)
-#     print("--------------------------------", file=f)
-#     print(f"Total Months: {TOTAL_MONTHS}", file=f)
-#     print(f"Total: ${NET_TOTAL}", file=f)
-#     print(f"Average Change: ${round(avgChange, 2)}", file=f)
-#     print(f"Greatest Increase in Profits: {maxMonth} (${maxIncrease})", file=f)
-#     print(f"Greatest Decrease in Profits: {minMonth} (${maxDecrease})", file=f)
-#     print()
