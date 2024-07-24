@@ -8,7 +8,8 @@ os.system('clear') #clear the terminal prior to running the program
 csvpath = os.path.join(os.path.dirname(__file__),"Resources", "election_data.csv")
 with open(csvpath, encoding="UTF-8") as csvfile:
     csv_reader = csv.DictReader(csvfile, delimiter = ',')
-    print(f"CSV Header: {csv_reader.fieldnames}")
+    csv_header = csv_reader.fieldnames #store the csv_header
+    print(f"CSV Header: {csv_header}")
 
 
   #Create a dictionary for candidate_info, initialize vote count
