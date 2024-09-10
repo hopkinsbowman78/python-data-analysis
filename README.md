@@ -20,9 +20,9 @@ To tackle this challenge I...
 ## Resources
 
 
-+ https://docs.python.org/3/library/index.html
++ Python Standard Library (https://docs.python.org/3/library/index.html)
 
-+ https://peps.python.org/pep-0008/
++ Python PEP8 Style Guide (https://peps.python.org/pep-0008/)
 
 + ChatGPT
    
