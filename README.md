@@ -49,4 +49,6 @@ To tackle this challenge I...
 + Analysis Folder (pypoll_analysis.txt)
 + Resources Folder (election_data.csv)
 
+#### Module 3 Python Challenge (Original Challenge Requirements)
+
 #### ReadMe
